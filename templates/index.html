@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sign Language Alphabet Recognition</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, times;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 25px;}
+  .bg-1 { 
+    background-color: #eb5757; /* Green */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 10px;
+  letter-spacing: 5px;
+}
+
+  .navbar-nav  li a:hover {
+    background-color:#d03c3c!important;
+    border-radius: 50%;
+    color: #fafafa !important;
+  }
+  #container-v {
+    overflow-y: hidden;
+    width:100% !important;
+  }
+  .child_con {
+    height: 500px;
+    float: left;
+    margin: 1em;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT </a></li>
+        <li><a href="#details">SYMPTOMS</a></li>
+        <li><a href="/practice">PREDICTION</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div id="about" class="container-fluid bg-1 text-center">
+  <h3 class="margin">PCOS PREDICTOR</h3>
+  <img src="{{url_for('static', filename='images.png')}}" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <h3>PCOS (Polycystic Ovary Syndrome) is a hormonal disorder that affects women of reproductive age. It is characterized by hormonal imbalances, multiple cysts on the ovaries, and disrupted menstrual cycles. PCOS can have a significant impact on a woman's health and well-being </h3>
+</br>
+</div>
+
+
+<!-- Third Container (Grid) -->
+<div id="details" class="container-fluid bg-3 text-center">    
+  <h3 class="margin" style="color: #781313;">Symptoms of PCOS</h3><br>
+  <div class="row">
+    <div class="col-sm-4" style="padding:0% 5% 0% 4%">
+      <p><b>Irregular Menstrual Cycles:</b> Women with PCOS may experience irregular periods, with cycles that are longer or shorter than usual, or even missed periods.</p>
+    </div>
+    <div class="col-sm-4" style="padding:0% 4% 0% 4%"> 
+      <p><b>Excess Hair Growth:</b> PCOS can cause unwanted hair growth on the face, chest, back, or other areas of the body, known as hirsutism.</p>
+    </div>
+    <div class="col-sm-4" style="padding:0% 4% 0% 5%"> 
+      <p><b>Acne:</b> Many women with PCOS experience persistent acne that may be difficult to treat.</p>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4" style="padding:0% 5% 0% 4%">
+      <p><b>Weight Gain:</b> PCOS is often associated with weight gain, especially around the abdomen, and difficulty losing weight.</p>
+    </div>
+    <div class="col-sm-4" style="padding:0% 4% 0% 5%">
+      <p><b>Skin Darkening:</b> PCOS can lead to patches of darkened skin, particularly in areas such as the neck, groin, or underarms.</p>
+    </div>
+    <div class="col-sm-4" style="padding:0% 4% 0% 5%">
+      <p><b>Fertility Issues:</b> PCOS is a leading cause of infertility due to irregular ovulation or the absence of ovulation.</p>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4" style="padding:0% 5% 0% 4%">
+      <p><b>Ovarian Cysts:</b> Women with PCOS may have enlarged ovaries with multiple small cysts, which can cause pelvic pain or discomfort.</p>
+    </div>
+    <div class="col-sm-4" style="padding:0% 4% 0% 5%">
+      <p><b>Fatigue:</b> Women with PCOS may feel tired or experience low energy levels.</p>
+    </div>
+    <div class="col-sm-4" style="padding:0% 4% 0% 5%">
+      <p><b>Mood Changes:</b> PCOS can contribute to mood swings, anxiety, and depression in some individuals.</p>
+    </div>
+  </div>
+  
+</div>
+</body>
+</html>

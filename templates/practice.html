@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+ <div class="login">
+	<h1>PCOS Evaluation</h1>
+        <h3>0 represents 'NO' and 1 represents 'YES'</h3>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Follicle_No.(R)" placeholder="Follicle_No.(R)" required="required" />
+        <input type="text" name="Follicle_No.(L)" placeholder="Follicle_No.(L)" required="required" />
+		<input type="text" name="Weight_gain(Y/N)	" placeholder="Weight_gain(Y/N)	" required="required" />
+                  <input type="text" name="Skin_darkening (Y/N)	" placeholder="Skin_darkening (Y/N)	" required="required" />
+              <input type="text" name="Hair Growth (Y/N)" placeholder="Hair Growth (Y/N)" required="required" />
+           <input type="text" name="Irregular_Cycle(Y/N)	" placeholder="Irregular_Cycle(Y/N)	" required="required" />
+         <input type="text" name="Fast_food_(Y/N)" placeholder="Fast_food_(Y/N)" required="required" />
+          <input type="text" name="Pimples (Y/N)" placeholder="Pimples (Y/N)" required="required" />
+      <input type="text" name="AMH(ng/mL)	" placeholder="AMH(ng/mL)	" required="required" />
+   
+
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
